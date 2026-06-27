@@ -1,0 +1,76 @@
+{
+    "coal": {
+        "today": {
+            "sample": "3",
+            "tm": "36.83",
+            "ash": "23.36",
+            "cv": "2532",
+            "s": "0.69"
+        },
+        "thismonth": {
+            "sample": "327",
+            "tm": "37.28",
+            "ash": "22.64",
+            "cv": "2546",
+            "s": "0.64"
+        },
+        "thisyear": {
+            "sample": "5167",
+            "tm": "36.49",
+            "ash": "23.35",
+            "cv": "2565",
+            "s": "0.66"
+        },
+        "lastmonth": {
+            "sample": "813",
+            "tm": "37.93",
+            "ash": "21.67",
+            "cv": "2569",
+            "s": "0.64"
+        },
+        "lastyear": {
+            "sample": "6691",
+            "tm": "35.85",
+            "ash": "24.55",
+            "cv": "2508",
+            "s": "0.56"
+        }
+    },
+    "limestone": {
+        "today": {
+            "sample": "8",
+            "m_power": "1.61",
+            "caco_power": "89.31",
+            "m_auto": "1.74",
+            "caco_auto": "90.25"
+        },
+        "thismonth": {
+            "sample": "112",
+            "m_power": "",
+            "caco_power": "",
+            "m_auto": "",
+            "caco_auto": ""
+        },
+        "thisyear": {
+            "sample": "112",
+            "m_power": "",
+            "caco_power": "",
+            "m_auto": "",
+            "caco_auto": ""
+        },
+        "lastmonth": {
+            "sample": "244",
+            "m_power": "1.005",
+            "caco_power": "90.02",
+            "m_auto": "1.57",
+            "caco_auto": "90.16"
+        },
+        "lastyear": {
+            "sample": "2537",
+            "m_power": "1.35",
+            "caco_power": "89.79",
+            "m_auto": "1.37",
+            "caco_auto": "90.04"
+        }
+    }
+}

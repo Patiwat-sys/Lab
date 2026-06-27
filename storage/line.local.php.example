@@ -1,0 +1,27 @@
+<?php
+declare(strict_types=1);
+
+/**
+ * คัดลอกเป็น storage/line.local.php แล้วใส่ค่าจริง
+ * ไฟล์ line.local.php ไม่ควร commit ขึ้น git
+ *
+ * ส่งแจ้งเตือนทีละคน (แนะนำ) — ใส่ User ID ของแต่ละคนใน to_ids
+ * ตั้ง Webhook URL: {app_url}/line_webhook.php
+ * ดูรายชื่อคนที่แอดบอท: tools/line_followers.php (ต้อง login admin)
+ * ทดสอบส่งหลายคน (Broadcast / multicast): tools/line_test_push.php
+ */
+return [
+    'enabled' => true,
+    'channel_access_token' => '',
+    'channel_secret' => '',
+    'to_id' => '',
+    'to_ids' => [
+        // 'Uxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        // 'Uyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy',
+    ],
+    // URL เต็มของเว็บ (ใส่ตอนขึ้น server จริง) เช่น 'https://lab.example.com/Lab-master'
+    'app_url' => '',
+    'brand_name' => 'Lab Gas Dashboard',
+    // ทดสอบบน XAMPP: true = แจ้งเตือนแก๊สส่งถึงผู้ติดตามบอททุกคน (ปิดเมื่อขึ้น production)
+    'broadcast_notify' => false,
+];
