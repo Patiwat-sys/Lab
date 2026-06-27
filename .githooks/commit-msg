@@ -1,5 +1,0 @@
-#!/bin/sh
-# Strip Cursor co-author line from commit messages (local hook).
-file="$1"
-grep -v 'Co-authored-by: Cursor <cursoragent@cursor.com>' "$file" > "$file.tmp"
-mv "$file.tmp" "$file"
