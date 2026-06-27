@@ -101,16 +101,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'units' => $saved ? gasTankBoardUnitsPayload($groupedUnits, substr($recordDate, 0, 7)) : null,
                 'reload_board' => $saved && $entryType === 'adding',
             ], JSON_UNESCAPED_UNICODE);
-            exit;
-        }
+        exit;
+    }
 
         if ($redirectTab === 'dashboard') {
             header('Location: gas_consumption.php?tab=dashboard');
         } else {
             header('Location: ' . gasFormTabUrl(gasFormListRedirectParams(array_merge($_POST, ['list_page' => 1]))));
         }
-        exit;
-    }
+    exit;
+}
 
     if ($action === 'update_entry') {
         $entryId = (int) ($_POST['entry_id'] ?? 0);
@@ -367,7 +367,7 @@ renderHeader('Gas Consumption', 'gas');
         <div class="gas-tank-board-head-top">
           <div class="gas-tank-board-head-title">
             <h1>Gas Cylinder Tracking Chart</h1>
-          </div>
+      </div>
           <button
             type="button"
             class="gas-dash-summary-toggle"
@@ -377,7 +377,7 @@ renderHeader('Gas Consumption', 'gas');
           >ดูข้อมูล Summary</button>
         </div>
         <div class="gas-tank-board-head-inner">
-          <div>
+      <div>
             <p class="muted gas-dash-period">สรุปเดือน <?= h(gasMonthLabel($currentMonth)) ?> — ยอดต้นเดือนยกมาจาก Remain เดือนก่อน</p>
             <ul class="gas-tank-legend" aria-label="คำอธิบายสถานะถัง">
               <li><span class="gas-tank-legend-swatch is-full"></span> เต็ม</li>
@@ -385,7 +385,7 @@ renderHeader('Gas Consumption', 'gas');
               <li><span class="gas-tank-legend-swatch is-empty"></span> หมดแล้ว</li>
               <li><span class="gas-tank-legend-swatch is-damaged"></span> ชำรุด</li>
             </ul>
-          </div>
+      </div>
           <div class="gas-tank-kpis" id="gasTankKpis">
             <div class="gas-kpi"><span>ถังทั้งหมด</span><strong data-kpi="total"><?= (int) $dashMonthTotals['total_tanks'] ?></strong></div>
             <div class="gas-kpi gas-kpi--full"><span>เต็ม</span><strong data-kpi="full"><?= (int) $dashMonthTotals['full_tanks'] ?></strong></div>
@@ -1064,7 +1064,7 @@ renderHeader('Gas Consumption', 'gas');
                 </div>
               </div>
             </div>
-          </form>
+    </form>
         </div>
         <div class="gas-edit-modal__footer gf-footer">
           <button type="button" class="gf-cancel" id="gasDashEntryCancelBtn" form="gasDashEntryForm">ยกเลิก</button>
@@ -1248,7 +1248,7 @@ renderHeader('Gas Consumption', 'gas');
       <div class="chart-wrap">
         <canvas id="gasMonthlyChart" height="120"></canvas>
       </div>
-    </article>
+  </article>
 
     <article class="card gas-dash-year-card">
       <h3>Year Summary — <?= $year ?></h3>
